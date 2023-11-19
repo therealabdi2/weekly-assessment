@@ -1,7 +1,13 @@
 import { Routes } from '@angular/router';
-import { TodoListComponent } from './containers/todo-list/todo-list.component';
 
 export const AdminRoutes: Routes = [
-  { path: 'todos', component: TodoListComponent },
+  {
+    path: 'todos',
+    loadComponent: () =>
+      import('../admin/containers/todo-list/todo-list.component').then(
+        (x) => x.TodoListComponent,
+      ),
+  },
+
   { path: '', pathMatch: 'full', redirectTo: 'todos' },
 ];
