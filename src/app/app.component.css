@@ -1,0 +1,9 @@
+.app {
+  .header {
+    color: rgba(175, 47, 47, 0.15);
+  }
+  margin-top: 50px;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
